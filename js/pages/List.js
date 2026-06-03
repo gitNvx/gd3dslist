@@ -85,9 +85,6 @@ export default {
                     <div class="errors" v-show="errors.length > 0">
                         <p class="error" v-for="error of errors">{{ error }}</p>
                     </div>
-                    <div class="og">
-                        <p class="type-label-md">Website layout made by <a href="https://tsl.pages.dev/" target="_blank">TheShittyList</a></p>
-                    </div>
                     <template v-if="editors">
                         <h3>List Editors</h3>
                         <ol class="editors">
@@ -100,16 +97,25 @@ export default {
                     </template>
                     <h3>Submission Requirements</h3>
                     <p>
-                        Achieved the record without using hacks (however, FPS bypass is allowed, up to 360fps)
+                        The level must be beaten on an actual 3DS; emulators are strictly prohibited.
                     </p>
                     <p>
-                        Achieved the record on the level that is listed on the site - please check the level ID before you submit a record
+                        Levels cannot be modified. If a level is altered, it will be treated as a separate version. You must provide the .gmd file used along with the original level ID. Only records of the unmodified level qualify.
                     </p>
                     <p>
-                        Have either source audio or clicks/taps in the video. Edited audio only does not count
+                        The level must be uploaded to the original Geometry Dash server.
                     </p>
                     <p>
-                        The recording must have a previous attempt and entire death animation shown before the completion, unless the completion is on the first attempt. Everyplay records are exempt from this
+                        Only levels with a duration of 30 seconds or longer will be considered.
+                    </p>
+                    <p>
+                        A handcam with source audio is required. Edited audio or PC-only footage (e.g., NTRViewer streams) will not be accepted.
+                    </p>
+                    <p>
+                        Following the previous rule, PC streams (via Capture Card or NTR Stream) are valid, but they must include a handcam with source audio. Clicks or taps must be clearly audible.
+                    </p>
+                    <p>
+                        The recording must show a previous attempt and the entire death animation before the completion, unless the level is beaten on the first attempt.
                     </p>
                     <p>
                         The recording must also show the player hit the endwall, or the completion will be invalidated.
@@ -118,11 +124,14 @@ export default {
                         Do not use secret routes or bug routes
                     </p>
                     <p>
-                        Do not use easy modes, only a record of the unmodified level qualifies
+                        Records may be denied if they are deemed suspicious or if they take advantage of a loophole in the rules.
                     </p>
                     <p>
-                        Once a level falls onto the Legacy List, we accept records for it for 24 hours after it falls off, then afterwards we never accept records for said level
+
                     </p>
+                    <div class="og">
+                        <p class="type-label-md">Layout by <a href="https://tsl.pages.dev/" target="_blank">TheShittyList</a></p>
+                    </div>
                 </div>
             </div>
         </main>
