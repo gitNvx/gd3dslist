@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=1024" />
-        <title>GD3DS List</title>
+        <title>Your List Name</title>
 
         <!-- Replace your server icon by uploading an image file named "list_icon.png"-->
         <link rel="icon" href="/list_icon.png" />
@@ -35,10 +35,10 @@
         <script type="module" src="/js/main.js"></script>
     </head>
     <body id="app">
-        <header>
+        <header :class="{ dark: store.dark }">
             <div class="logo">
-                <img src="/list_logo.png" alt="GD3DS List" />
-                <p>v1.0</p>
+                <h2>Sample List</h2>
+                <p>v1.0.0</p>
             </div>
             <nav class="nav">
                 <router-link class="nav__tab" to="/">
@@ -51,6 +51,15 @@
                     <span class="type-label-lg">Roulette</span>
                 </router-link>
                 <div class="nav__actions">
+                    <button
+                        class="nav__icon"
+                        @click.prevent="store.toggleDark()"
+                    >
+                        <img
+                            :src="store.dark ? '/assets/light.svg' : '/assets/dark.svg'"
+                            alt=""
+                        />
+                    </button>
                     <!-- Replace the '#' with your discord server's invite-->
                     <a class="nav__icon" href="#">
                         <img src="/assets/discord.svg" alt="Discord Logo" />
@@ -65,6 +74,6 @@
                 </div>
             </nav>
         </header>
-        <router-view></router-view>
+        <router-view :class="{ dark: store.dark }"></router-view>
     </body>
 </html>
